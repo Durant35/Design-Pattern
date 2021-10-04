@@ -1,0 +1,130 @@
+aclocal.m4
+autom4te.cache
+config.h*
+config.h.in
+config.log
+config.status
+config.guess
+config.sub
+config.rpath
+configure
+/config/tizonia/gstomx.conf
+libtool
+stamp-h
+stamp-h.in
+stamp-h1
+ltmain.sh
+missing
+mkinstalldirs
+compile
+install-sh
+depcomp
+autoregen.sh
+ABOUT-NLS
+_stdint.h
+
+.deps
+.libs
+*.lo
+*.la
+*.o
+*~
+*.bak
+*.swp
+*.orig
+*.rej
+tools/listcomponents
+/m4/libtool.m4
+/m4/ltoptions.m4
+/m4/ltsugar.m4
+/m4/ltversion.m4
+/m4/lt~obsolete.m4
+Makefile.in
+
+test-driver
+*.log
+*.trs
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+#*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+#*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Eclipse files
+.cproject
+.project
+.settings
+
+# Build outputs
+build
+build-*
+.idea
+
+# Test data
+test_data
+
+# ctags
+tags
+
+#swp file
+*.swp
+
+# Ocr_xia
+ocr_xia
+
+# python cache
+*.pyc
+*.cache
+*.rosbag
+
+# path hint shell script
+*local_setup.bash
+
+config/positionfromclicking
+
+deps
+deps/*
+
+install
+install/*
+
+target
+target/*
+
+#vscode settings
+.vscode/
+
+extracted
+
+# symbolic link
+config/models
+
+# build-generated files
+build*
+cmake-build*
+bin
+bin/*
