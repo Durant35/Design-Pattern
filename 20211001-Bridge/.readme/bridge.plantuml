@@ -1,0 +1,49 @@
+@startuml
+center header
+  <size:24>Bridge Pattern</size>
+endheader
+
+' ":\t\t\t\t\t\t\t" just for layout
+Abstraction *-right- AbstractionImpl :\t\t\t\t\t\t\t
+class AbstractionImpl
+class Abstraction {
+  {method}
+    +Abstraction(AbstractionImpl *)
+    {abstract} +Operate() :void
+
+  {field}
+    #AbstractionImpl *impl_
+}
+
+Abstraction <|-down- RefinedAbstraction
+'make sure it's directly down
+'Abstraction <|-down[hidden]- RefinedAbstraction
+class RefinedAbstraction {
+  {method}
+    +RefinedAbstraction(AbstractionImpl *)
+    +Operate() :void
+}
+
+class AbstractionImpl {
+  {method}
+    {abstract} +Operate() :void
+}
+
+class ConcreteAbstractionImplA extends AbstractionImpl {
+  {method}
+    +Operate() :void
+}
+
+class ConcreteAbstractionImplB extends AbstractionImpl {
+  {method}
+    +Operate() :void
+}
+
+/'TODO(gary): How to make them better organized?
+together {
+  class RefinedAbstraction
+  class ConcreteAbstractionImplA
+  class ConcreteAbstractionImplB
+}
+'/
+@enduml
