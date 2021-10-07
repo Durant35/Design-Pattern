@@ -1,0 +1,53 @@
+@startuml
+center header
+  <size:24>Composite Pattern</size>
+endheader
+
+class Client/main()
+' ":\t\t\t\t\t\t\t" just for layout
+"Client/main()" .right.> Component :\t\t
+"Client/main()" .right.> Leaf
+"Client/main()" .right.> Composite
+
+class Component {
+  {method}
+    +Component(const std::string &)
+
+    {abstract} +Operate() :void
+
+    +Add(const Component *) :void
+    +Remove(const Component *) :void
+    +GetChild(const size_t &) :Component *
+
+    +GetName() :std::string
+
+  {field}
+    #std::string name_
+}
+
+Leaf -up-|> Component :\t
+class Leaf {
+  {method}
+    +Leaf(const std::string &)
+
+    +Operate() :void
+    +GetChild(const size_t &) :Component *
+}
+
+Composite -up-|> Component :\n\n\n\n\t
+Composite --> Component :\t\t\t
+Composite "1" o-- "N" Component :\t
+class Composite {
+  {method}
+    +Composite(const std::string &name)
+
+    +Operate() :void
+
+    +Add(const Component *) :void
+    +Remove(const Component *) :void
+    +GetChild(const size_t &) :Component *
+
+  {field}
+    -std::vector<Component *> component_vec_
+}
+@enduml
